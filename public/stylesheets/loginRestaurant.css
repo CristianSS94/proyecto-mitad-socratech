@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "christmabet.ttf";
+  src: url("/font/christmabet.ttf");
+}
+
+main {
+  min-height: calc(90vh - 5rem);
+  font-family: serif;
+  color: #402f27;
+  background-image: url("/images/index/fondo-navidad.jpg");
+  background-size: cover;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.css-section1 {
+  margin-top: 10vh;
+  .css-col1 {
+    .h1-section1 {
+      color: #ce8b3d;
+      font-family: "christmabet.ttf";
+      font-size: 4rem;
+    }
+  }
+  .css-col2 {
+    .p-section1 {
+      font-weight: bold;
+      font-style: italic;
+      margin-bottom: 0 !important;
+    }
+  }
+  .css-col3 {
+    .hr-section1 {
+      border-top: 1px solid #402f27;
+      border-bottom: 1px solid #402f27;
+      opacity: 1;
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.css-col4 {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.css-formulario {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px;
+  color: #402f27;
+  background-color: #cdaf97;
+}
+
+button {
+  width: 5rem;
+  border: 1px solid black;
+  margin: 5px;
+  color: #402f27;
+  background-color: #567633;
+  border-radius: 10px;
+}
+
+.mensaje-error {
+  text-align: center;
+  color: red;
+}
+
+.css-botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #912729;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ce8b3d;
+  border-radius: 15px;
+  border: 2.5px solid #912729;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #567633;
+}
+
+/* moviles */
+@media (width <= 600px) {
+  .css-section1 {
+    .css-col1 {
+      .h1-section1 {
+        color: #ce8b3d;
+        font-family: "christmabet.ttf";
+        font-size: 1.5rem;
+      }
+    }
+    .css-col2 {
+      .p-section1 {
+        margin: 0 !important;
+      }
+    }
+    .css-col3 {
+      .hr-section1 {
+        margin-top: 0 !important;
+      }
+    }
+
+    .p-section1 {
+      font-size: 0.8rem;
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
+  .css-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* TABLETS */
+@media (width <= 992px) {
+  .css-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+}

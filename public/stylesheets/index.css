@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "christmabet.ttf";
+  src: url("/font/christmabet.ttf");
+}
+
+main {
+  min-height: 90vh;
+  font-family: serif;
+  color: #402f27;
+  background-image: url("/images/index/fondo-navidad.jpg");
+  background-size: cover;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.css-section1 {
+  margin-top: 10vh;
+
+  .css-col1 {
+    .h1-section1 {
+      color: #ce8b3d;
+      font-family: "christmabet.ttf";
+      font-size: 4rem;
+    }
+  }
+
+  .css-col2 {
+    .p-section1 {
+      font-weight: bold;
+      font-style: italic;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .css-col3 {
+    .hr-section1 {
+      border-top: 1px solid #402f27;
+      border-bottom: 1px solid #402f27;
+      opacity: 1;
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.css-section2 {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px 0 12px;
+  flex-wrap: wrap;
+  gap: 50px;
+
+  .css-restaurants {
+    color: #cdaf97;
+    background-color: #912729;
+    border: 2px solid #402f27;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    min-height: 500px;
+
+    .css-img {
+      width: 100%;
+      aspect-ratio: 2/1;
+      border: 2px solid #402f27;
+      border-radius: 1rem;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.css-row-restaurant {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  .css-col4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .p-restaurant {
+      font-size: 2rem;
+      color: #cdaf97;
+    }
+  }
+
+  .css-col5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.css-buttons {
+  color: #cdaf97;
+  border: 2px solid #567633;
+  background-color: #402f27;
+  border-radius: 1rem;
+  aspect-ratio: 2/1;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.css-buttons:hover {
+  background-color: #567633;
+  border: 2px solid #402f27;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #912729;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ce8b3d;
+  border-radius: 15px;
+  border: 2.5px solid #912729;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #567633;
+}
+
+/* MOVILES */
+@media (width <= 600px) {
+  .css-section1 {
+    .css-col1 {
+      .h1-section1 {
+        color: #ce8b3d;
+        font-family: "christmabet.ttf";
+        font-size: 1.5rem;
+      }
+    }
+    .css-col2 {
+      .p-section1 {
+        margin: 0 !important;
+      }
+    }
+    .css-col3 {
+      .hr-section1 {
+        margin-top: 0 !important;
+      }
+    }
+
+    .p-section1 {
+      font-size: 0.8rem;
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
+  .css-section2 {
+    .css-restaurants {
+      min-height: 150px;
+    }
+  }
+
+  .css-row-restaurant {
+    .css-col4 {
+      .p-restaurant {
+        font-size: 1rem;
+        color: #cdaf97;
+      }
+    }
+  }
+}
+
+/* TABLETS */
+@media (width >= 600px) {
+  .css-section2 {
+    .css-restaurants {
+      min-height: 300px;
+    }
+  }
+
+  .css-row-restaurant {
+    .css-col4 {
+      .p-restaurant {
+        font-size: 1rem;
+        color: #cdaf97;
+      }
+    }
+  }
+}
+

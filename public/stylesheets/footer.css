@@ -1,0 +1,26 @@
+.css-footer {
+  background-color: #912729;
+  color: #cdaf97;
+  height: 5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  .css-footer-hijo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.firma-footer {
+  color: #CE8B3D;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.firma-footer:hover{
+  color: #cdaf97;
+  background-color: #567633;
+  border: 2px solid #402f27;
+  border-radius: 0.5rem;
+}

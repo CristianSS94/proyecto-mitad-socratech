@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "christmabet.ttf";
+  src: url("/font/christmabet.ttf");
+}
+
+nav{
+  min-height: 10vh;
+}
+
+#css-fondo-principal {
+  background-color: #912729 !important;
+}
+
+
+#css-texto-principal-inicio {
+  color: #CE8B3D;
+  font-weight: bold;
+  font-family: "christmabet.ttf";
+}
+
+
+#css-texto-principal {
+  color: #cdaf97;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+}
+
+#css-texto-principal:hover {
+  background-color: #567633;
+  border: 2px solid #402f27;
+  border-radius: 1rem;
+}

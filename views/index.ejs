@@ -1,0 +1,46 @@
+<%- include('head') %>
+<link rel="stylesheet" href="/stylesheets/index.css" />
+<title>RESTAURANTS</title>
+<%- include('navbar') %>
+
+<main class="container-fluid">
+  <section class="row css-section1">
+    <div class="col-12 css-col1">
+      <h1 class="h1-section1">BusinessMeeting</h1>
+    </div>
+    <div class="col-12 col-md-5 col-xl-3 css-col2">
+      <p class="p-section1">
+        Encuentra el restaurante perfecto para tu reunion de empresa.
+      </p>
+    </div>
+    <div class="col-12 col-xl-9 css-col3">
+      <hr class="hr-section1" />
+    </div>
+  </section>
+  <section class="row css-section2">
+    <% result.forEach(elem => { %>
+    <div class="col-12  col-lg-5 col-xl-5 css-restaurants">
+      <img
+        class="css-img"
+        src="/images/restaurants/<%= elem.restaurant_img %>"
+        alt=""
+      />
+      <div class="row css-row-restaurant">
+        <div class="col-12 col-sm-9 col-xl-9 css-col4">
+          <p class="p-restaurant"><%= elem.restaurant_name %></p>
+          <p class="p-restaurant"><%= elem.style %></p>
+        </div>
+        <div class="col-12 col-sm-3 col-xl-3 css-col5">
+          <a href="/restaurants/oneRestaurant/<%= elem.restaurant_id  %>">
+            <button class="css-buttons">Ver más</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </section>
+  <section class="row css-section3">
+    <br />
+  </section>
+</main>
+<%- include('footer') %>

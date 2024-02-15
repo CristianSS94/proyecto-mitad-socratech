@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "christmabet.ttf";
+  src: url("/font/christmabet.ttf");
+}
+
+main {
+  min-height: calc(90vh - 5rem);
+  font-family: serif;
+  color: #402f27;
+  background-image: url("/images/index/fondo-navidad.jpg");
+  background-size: cover;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* SECTION 1 */
+.css-section1 {
+  margin-top: 10vh;
+  .css-col1 {
+    .h1-section1 {
+      color: #ce8b3d;
+      font-family: "christmabet.ttf";
+      font-size: 4rem;
+    }
+  }
+  .css-col2 {
+    .p-section1 {
+      font-weight: bold;
+      font-style: italic;
+      margin-bottom: 0 !important;
+    }
+  }
+  .css-col3 {
+    .hr-section1 {
+      border-top: 1px solid #402f27;
+      border-bottom: 1px solid #402f27;
+      opacity: 1;
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+/* SECTION 2 */
+.css-section2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  .css-col5 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+
+    .datos-de-contacto1 {
+      color: #567633;
+      font-weight: bold;
+    }
+
+    .datos-de-contacto2 {
+      color: #912729;
+    }
+
+    .restaurant_name {
+      margin: 0 0 1rem 0;
+      font-size: 3rem;
+      text-decoration: underline;
+    }
+  }
+
+  .css-div-restaurant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img-restaurant {
+      width: 100%;
+      aspect-ratio: 2/1;
+      border: 0.5rem solid #912729;
+      border-radius: 2rem;
+    }
+  }
+}
+
+/* SECTION 3 */
+
+.h3-dish {
+  text-align: center;
+}
+
+.hr-dish {
+  border-top: 1px solid #402f27;
+  border-bottom: 1px solid #402f27;
+  opacity: 1;
+}
+
+.css-div-dish {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .css-dish {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+.dish-img {
+  width: 100%;
+  aspect-ratio: 2/1;
+  border: 0.5rem solid #912729;
+  border-radius: 2rem;
+}
+
+.css-buttons {
+  /* background-color: #567633; */
+  color: #cdaf97;
+  border: 2px solid #402f27;
+  background-color: #912729;
+  border-radius: 1rem;
+  width: 120px;
+  aspect-ratio: 2/1;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.css-buttons:hover {
+  background-color: #567633;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #912729;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ce8b3d;
+  border-radius: 15px;
+  border: 2.5px solid #912729;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #567633;
+}
+
+@media (width <= 600px) {
+  .css-section1 {
+    .css-col1 {
+      .h1-section1 {
+        color: #ce8b3d;
+        font-family: "christmabet.ttf";
+        font-size: 1.5rem;
+      }
+    }
+    .css-col2 {
+      .p-section1 {
+        margin: 0 !important;
+      }
+    }
+    .css-col3 {
+      .hr-section1 {
+        margin-top: 0 !important;
+      }
+    }
+
+    .p-section1 {
+      font-size: 0.8rem;
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
+  .css-section2 {
+    .css-col5 {
+      .datos-de-contacto1 {
+        font-size: 1rem;
+        color: #567633;
+        font-weight: bold;
+      }
+  
+      .datos-de-contacto2 {
+        color: #912729;
+      }
+      .restaurant_name {
+        font-size: 2rem;
+      }
+    }
+
+    .css-div-restaurant {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .img-restaurant {
+        width: 100%;
+        aspect-ratio: 2/1;
+        border: 0.5rem solid #912729;
+        border-radius: 2rem;
+      }
+    }
+  }
+}
+

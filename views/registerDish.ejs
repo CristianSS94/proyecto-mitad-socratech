@@ -1,0 +1,54 @@
+<%- include('head') %>
+<link rel="stylesheet" href="/stylesheets/loginRestaurant.css" />
+<title>RESTAURANTS</title>
+<%- include('navbar') %>
+
+<main class="container-fluid">
+  <section class="row css-section1">
+    <div class="col-12 css-col1">
+      <h1 class="h1-section1">BusinessMeeting</h1>
+    </div>
+    <div class="col-12 col-md-5 col-xl-3 css-col2">
+      <p class="p-section1">
+        Encuentra el restaurante perfecto para tu reunion de empresa.
+      </p>
+    </div>
+    <div class="col-12 col-md-7 col-xl-9 css-col3">
+      <hr class="hr-section1" />
+    </div>
+  </section>
+  <section class="row">
+    <div class="col-12 css-col4">
+      <h1>Formulario de registro de un plato</h1>
+      <form
+        action="/dishes/registerDish/<%= restaurant_id %>"
+        method="post"
+        enctype="multipart/form-data"
+        class="css-formulario"
+      >
+        <input
+          type="text"
+          name="dish_name"
+          placeholder="Nombre del plato"
+        />
+        
+        <input
+          type="text"
+          name="dish_description"
+          placeholder="Descripcion del plato"
+        />
+        
+        <input type="file" name="img" />
+        <h6><%= typeof message != 'undefined' ? message : null %></h6>
+        <div class="css-botones">
+          <button>Aceptar</button>
+          <button type="reset">Limpiar</button>
+          <a href="/restaurants/oneRestaurant/<%= restaurant_id %>">
+            <button type="button">Cancelar</button>
+          </a>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+<%- include('footer') %>

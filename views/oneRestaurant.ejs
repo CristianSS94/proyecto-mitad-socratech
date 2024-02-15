@@ -1,0 +1,126 @@
+<%- include('head') %>
+<link rel="stylesheet" href="/stylesheets/oneRestaurant.css" />
+<title>ONE RESTAURANTS</title>
+<%- include('navbar') %>
+
+<main class="container-fluid">
+  <!-- SECTION 1 -->
+  <section class="row css-section1">
+    <div class="col-12 css-col1">
+      <h1 class="h1-section1">BusinessMeeting</h1>
+    </div>
+    <div class="col-12 col-md-5 col-xl-3 css-col2">
+      <p class="p-section1">
+        Encuentra el restaurante perfecto para tu reunion de empresa.
+      </p>
+    </div>
+    <div class="col-12 col-md-7 col-xl-9 css-col3">
+      <hr class="hr-section1" />
+    </div>
+  </section>
+  <!-- SECTION 2 -->
+  <section class="row css-section2">
+    <div class="col-12 col-xl-6 css-div-restaurant">
+      <img
+        class="img-restaurant"
+        src="/images/restaurants/<%= result[0].restaurant_img %>"
+        alt=""
+      />
+    </div>
+    <div class="col-12 col-xl-6 css-col5">
+      <h2 class="restaurant_name"><%= result[0].restaurant_name %></h2>
+      <h3 class="datos-restaurant">Especialidad en: <%= result[0].style %></h3>
+      <p class="datos-restaurant"><%= result[0].restaurant_description %></p>
+      <h4 class="datos-de-contacto1">
+        <span class="datos-de-contacto2">Email: </span><%= result[0].email %>
+      </h4>
+      <h4 class="datos-de-contacto1">
+        <span class="datos-de-contacto2">Teléfono: </span> <%=
+        result[0].phone_number %>
+      </h4>
+      <div class="row">
+        <div class="col-6 col-xl-3">
+          <a href="/restaurants/editRestaurant/<%= result[0].restaurant_id %>">
+            <button class="css-buttons">Editar info</button>
+          </a>
+        </div>
+        <div class="col-6 col-xl-3">
+          <a href="/dishes/registerDish/<%= result[0].restaurant_id %>"
+            ><button class="css-buttons">Añadir plato</button></a
+          >
+        </div>
+        <div class="col-6 col-xl-3">
+          <a
+            href="/restaurants/deleteRestaurantLogic/<%= result[0].restaurant_id %>"
+            ><button class="css-buttons">Borrado logico</button></a
+          >
+        </div>
+        
+        <div class="col-6 col-xl-3">
+          <a
+            href="/restaurants/deleteRestaurantPermanent/<%= result[0].restaurant_id %>"
+          >
+            <button class="css-buttons">Borrado Permanente</button></a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SECTION 3 -->
+  <section class="css-section3">
+    <div class="row">
+      <div class="col-12 col-xl-2">
+        <hr class="hr-dish" />
+      </div>
+      <div class="col-12 col-xl-3">
+        <h3 class="h3-dish">Nuestros platos más destacados</h3>
+      </div>
+      <div class="col-12 col-xl-7">
+        <hr class="hr-dish" />
+      </div>
+    </div>
+    <div class="row css-div-dish">
+      <% result_dish.forEach((elem) => { %>
+      <div class="col-12 col-xl-6 css-dish">
+        <h3 class="datos-restaurant"><%= elem.dish_name %></h3>
+        <p><%= elem.dish_description %></p>
+        <div class="row">
+          <div class="col-12 col-xl-4">
+            <a
+              href="/dishes/editDish/<%= elem.dish_id %>/<%= result[0].restaurant_id %>"
+              ><button class="css-buttons">Editar plato</button></a
+            >
+          </div>
+          <div class="col-6 col-xl-4">
+            <a
+              href="/dishes/deleteDishPermanent/<%= elem.dish_id %>/<%= result[0].restaurant_id %>"
+              ><button class="css-buttons">Borrado permanente</button></a
+            >
+          </div>
+          <div class=" col-6 col-xl-4">
+            <a
+              href="/dishes/deleteDishLogic/<%= elem.dish_id %>/<%= result[0].restaurant_id %>"
+            >
+              <button class="css-buttons">Borrado lógico</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-xl-6">
+        <img
+          class="dish-img"
+          src="/images/dishes/<%= elem.dish_img %>"
+          alt="foto dish"
+        />
+      </div>
+      <div class="col-12">
+        <br>
+      </div>
+      <% }) %>
+    </div>
+  </section>
+  <section>
+    <br />
+  </section>
+</main>
+<%- include('footer') %>
